@@ -23,6 +23,9 @@ SUDO_USER=rhino-live pacstall -QPINs nala-deb firefox-bin vscodium-deb celeste-b
 
 sudo sed -i 's/%sudo ALL=(ALL) NOPASSWD:ALL//' /etc/sudoers
 
+# Fix: Remove Plasma X11 session
+sudo rm /usr/share/xsessions/plasmax11.desktop
+
 #Hack: rhino landing
 if [ $(dpkg --print-architecture) = arm64 ]; then
 sudo rm -r /etc/firefox/syspref.js
