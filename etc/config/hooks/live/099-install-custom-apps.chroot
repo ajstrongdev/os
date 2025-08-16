@@ -19,7 +19,7 @@ sudo chown "rhino-live" -cR "/var/cache/pacstall"
 git config --global --add safe.directory '*'
 
 sudo mkdir -p /root/.config/gtk-3.0 /home/rhino-live/.config/gtk-3.0 /root/.config/gtk-4.0 /home/rhino-live/.config/gtk-4.0
-SUDO_USER=rhino-live pacstall -QPINs nala-deb firefox-bin vscodium-deb linux-kernel-stable rhino-core quintom-cursor-theme-git rhino-grub-theme-git timeshift fake-ubuntu-advantage-tools-deb rhino-setup-bin hello-rhino-bin
+SUDO_USER=rhino-live pacstall -QPINs nala-deb firefox-bin vscodium-deb linux-kernel-stable rhino-ubxi-core ubxi-kde-desktop-git quintom-cursor-theme-git rhino-grub-theme-git timeshift fake-ubuntu-advantage-tools-deb rhino-setup-bin hello-rhino-bin
 
 sudo sed -i 's/%sudo ALL=(ALL) NOPASSWD:ALL//' /etc/sudoers
 
@@ -179,8 +179,8 @@ displaymanagers:
   - lightdm
 
 defaultDesktopEnvironment:
-    executable: "unicorn-session"
-    desktopFile: "unicorn"
+    executable: "startplasma-wayland"
+    desktopFile: "plasma"
 
 basicSetup: false
 sysconfigSetup: false
